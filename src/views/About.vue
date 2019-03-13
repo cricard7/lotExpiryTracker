@@ -48,7 +48,7 @@
         <div class="col-md-4 offset-md-2">
           <h4><span class="badge badge-info mr-2">5</span>Select Matching Lot(s)</h4>
             <div class="list-group">
-                <div v-for="lot in matchingLots" :key="lot.lot" @click="selectedLots.push(lot)" class="list-group-item list-group-item-action border border-info mb-2">
+                <div v-for="lot in matchingLots" :key="lot.id" @click="selectedLots.push(lot)" class="list-group-item list-group-item-action border border-info mb-2">
                   <h5 class="mb-1">LOT: {{lot.lot}}</h5>
                   <h5 class="mb-1">EXPIRY: {{lot.expiry}}</h5>
                   <h5 class="mb-1">PRODUCT: {{lot.product}}</h5>
@@ -68,7 +68,7 @@
           
 
             <div class="list-group mt-2">
-                <div v-for="lot in selectedLots" :key="lot.lot" class="list-group-item list-group-item-action list-group-item-primary mb-2">
+                <div v-for="lot in selectedLots" :key="lot.id" class="list-group-item list-group-item-action list-group-item-primary mb-2">
                   <h5 class="mb-1">LOT: {{lot.lot}}</h5>
                   <h5 class="mb-1">EXPIRY: {{lot.expiry}}</h5>
                   <h5 class="mb-1">PRODUCT: {{lot.product}}</h5>
